@@ -1,0 +1,8 @@
+labs 
+portswiger
+Lab: Reflected XSS into HTML context with nothing encoded
+<script> alert(111)</script>        #input  searche
+
+Lab: Stored XSS into HTML context with nothing encoded
+<script> alert(111)</script> #input comment
+
