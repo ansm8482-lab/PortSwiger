@@ -1,0 +1,22 @@
+
+acces controle 2 
+ adminPanelTag.setAttribute('href', '/admin-8xm80x');
+   adminPanelTag.innerText = 'Admin panel'; 
+   //listent here here the bage men if add /admin-8xm80x in bage go to admin panal 
+   so you searche in source page 
+
+
+3 User role controlled by request parameter
+the idiea in to inter user name and passowd you see "Admin=false" in the request 
+this is vuln and solve this labe the change parameter false into true 
+ 
+4 User role can be modified in user profile 
+// listent to me in the labe if i change email if you see in response too word (roleid ,apikey  ) so take this andd ttis in requeste and change roleid  
+answar ({
+ "username": "wiener",
+  "email": "ansm8482@gmail.com",
+  "apikey": "BcttFhnwPIi0uRULIzt02A2tJo3xu79B",
+  "roleid": 2
+}) 
+5 Lab: User ID controlled by request parameter 
+

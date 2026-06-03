@@ -1,0 +1,12 @@
+baeckdoor
+ nmap -sV -sC -p- meta.local
+sudo nmap -sV -p 6667 meta.local
+
+nc meta.local 6667
+
+searchsploit UnrealIRCd
+
+ls /usr/share/nmap/scripts/ |grep backdoor
+
+
+https://www.gnome-look.org/p/1891375

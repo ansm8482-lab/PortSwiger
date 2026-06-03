@@ -1,0 +1,19 @@
+firest labe
+i usre sing by any user aand any paddword and sent this in the introder ,fires we select name of username like tes and add (add) and start attac and press in ligth and you see an changes
+
+
+
+2Lab: Username enumeration via response timing 
+
+
+X-Forwarded-For: 127.0.0.1 
+
+
+
+3 Lab: Password reset broken logic 
+the labe hase dont depaend of token and حل اللاب عنا هو اننا نحذف قيمة التوكن ونغيير من وينر الي كارلوس وحلينا اللاب 
+ 
+example 
+password-token=cx9cs0htgwvme6j7bymsuhtwirjpgwhe
+slove 
+password-token=
