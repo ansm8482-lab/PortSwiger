@@ -1,0 +1,39 @@
+//install 
+
+apt
+apt-get :  apt 
+apt-get install  snort
+apt-cache search snort        search packege your repository
+sudo apt-get install snort       download 
+
+//remove 
+
+apt-get remove snort    'remove' don't delete settings
+apt-get purge  snort     remove packege and settinges
+apt autoremove snort     remove liberriry they snort neded there to working
+autoremove               remnants       
+
+//updating packeges
+
+apt-get             update show updating 
+apt update
+apt-get upgrade     download updating right now
+apt upgrade
+
+//adding repositories
+
+nano /etc/apt/sources.list
+
+
+
+
+
+
+//commentes
+kali repositories
+main                programe open source support like commpany 'google,microsoft'
+universe            programe open source support by community 
+multiverse          programe cclose by copy right 
+restricted          programe private 
+backport            programe old
+

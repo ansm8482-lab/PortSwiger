@@ -1,0 +1,48 @@
+ifconfig
+ip a
+iwconfig     informaions of card of wifi
+
+//change informations
+
+sudo ifconfig wlan0 192.168.8.9        change your ip 
+sudo ifconfig wlan0 192.168.8.9 broadcast 192.168.1.255       chang ip && broadcast
+sudo ifconfig wlan0 192.168.8.9 broadcast 192.168.1.255  netmask 255.255.255.0
+
+//change serial number of netword card 'important'
+
+ifconfig wlan0 down          1                  close card 
+ifconfig wlan0 hw ether 00:11:22:33:44:55    2  change mac address
+ifconfig wln0 up             3                 turn on 
+
+sudo dhcpcd wlan0                 reset the wlan0
+
+//recon
+dig google.com    //show ip addres
+dig google.com ns  
+dig google.com mx
+
+
+//changing DNS server /edit
+
+nameserver 192.168.181.2   ask google this dns
+sudo nano /etc/resolv.conf
+echo "namesserver 8.8.8.8 "> /etc/resolv.conf
+nano /etc/hosts      192.168.10.10   google.com
+
+
+//  comment   eth0  wire card 
+wlan0   WIFI card 'wireless LAN'
+inet    your ip 
+Hwaddr   MAC Address
+hw ether hardware ethernet 
+DNS doman name system 
+DNS is translate name of site 'anas.local'to ip 
+
+ns :name server
+mx :mail exchange server
+
+//
+
+
+
+
