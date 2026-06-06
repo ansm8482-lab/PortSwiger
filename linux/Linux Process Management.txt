@@ -1,0 +1,5 @@
+ps 
+ps aux
+top          show procces of programe take begerthan of resources
+//command line
+nice -n 10 /bin/bash/python    men      

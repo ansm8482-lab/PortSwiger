@@ -1,0 +1,67 @@
+ r  read
+ w  write
+ x  excute
+
+ x          001     --x        1
+ w          010      -w-       2
+ r          100      r--       4
+
+ r-x        101       5
+ rw-        110       6
+ -wx        011       3
+ rwx        111       7
+ chmod 750 file.txt
+ 750 (7) owner  (5)group   (0) athers
+owner   :rwx           7
+Group   :r-x           5
+others  :---           0
+
+644
+
+4 others
+4 group
+6 owner
+
+rwx   
+4     r-- read 
+4    r-- read 
+6    rw-      red and write
+
+chmod 4752 file 
+2 others
+5 group
+7 owner
+4 setuid
+
+//changing permissions
+
+YGO
+U User        
+G Group
+O Others
+
+// User here this is crator (user,root) of file or user of root
+
+example
+chmod u-w file.txt    remove write frome file.txt
+chmod u+x file.txt    adding excute frome file.txt
+
+chmod  g=r            give group read only
+chmod  a+rwx          give 'all' all permissions 
+chmod 766 file.txt
+//impoertant //
+4000 'SUID' change user to owner 
+2000 'SGID' change gruop to group owner 
+1000 'Sticky Bit' save file frome deleting 'the owner use this bescuse the group dont delet file himself
+
+important for pentesting 
+find / -perm -4000
+find / -perm -2000
+//linux give 666 for file and 777 for folder
+//umask repressent remove of permissions
+umask=666-022=644
+high security   =077
+medium security =022
+no security     =000
+SUID it is bir=t adding in file ,so if not creater this file not allow 
+the hacker care SUID and hacker serche vuln of programe like nano ,becouse this allow acces and permissions acces of root  
