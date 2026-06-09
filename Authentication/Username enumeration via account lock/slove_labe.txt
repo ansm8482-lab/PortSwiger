@@ -1,0 +1,10 @@
+mean the labe i know user exest if user blicked
+in the request 
+1 inthe intruder select user name and select last password '$$' chose cluster bomb
+in intuder pas thepassord
+number 2 ,chose number 2 chose null paylodes and generat 5
+start attck
+inter to lenght and go to deffrient lenght 
+//explat  you see this name account bloocked so this real account so we know the the username
+the chose the passords
+end

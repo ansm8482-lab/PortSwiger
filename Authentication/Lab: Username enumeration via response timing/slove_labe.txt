@@ -1,0 +1,4 @@
+if you try more youy blocked
+so sceep this py chang ip becuse developer blokked and needed by ip if you chang ip you sceep this
+sulochaing    add in request to sceep ip     X-Forwarded-For:127.0.01
+
