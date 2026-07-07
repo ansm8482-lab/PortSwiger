@@ -1,0 +1,138 @@
+ernal: Memory management
+and control of CPU and hard and every thing
+The intermediary between software and hardware
+
+The  system is divided into two parts:
+
+kernal 
+user land 
+
+1. Kernel: A highly protected area. No one can access it except root. If it gets corrupted, the entire system crashes. 
+
+منطقة محميه لو اي حاجة باظت  كله يوقع ومحدش يقدر يلقع حتي root 
+
+----------------
+
+2. User Land: This is the regular stuff we use: programs, browser, terminal
+الحجات العادي زي المتصفح 
+----------------
+
+Kernel Modules = LKMs
+The feature allows you to add drivers without restarting your computer. 
+انت تقدر تضيف تعريفات متغير ما تعمل restart 
+----------------
+
+LKM operates at a lower level in the kernel. This means its privileges are higher than root.
+LKM دي اقل ليفيل في الكرنال وحتي صلحياتها اعلي من root 
+----------------
+
+kali > uname -a
+Linux Kali 4.19.0-kali1-amd64 #1 SMP Debian 4.19.13-1kali1 (2019-01-03) x86_64
+
+----------------
+
+
+kali > cat /proc/version
+Linux version 4.19.0-kali1-amd64 ...
+
+بتشوف الاعدادات
+----------------
+
+
+Kernel Tuning with sysctl
+sysctl: change setting of kernal 
+
+هي دي التول ال بتقظر تغير الاعدادن في الكرنال 
+----------------
+
+show all setting 
+kali > sysctl -a | less
+
+----------------
+
+
+The most important example of hacking - IP forwarding
+
+
+look this 
+net.ipv4.ip_forward = 0
+this mean don't allow send packet 
+
+
+To perform a MITM attack, you need to configure your device to function as a router.
+لو عايز تعمل هجوم MITM لازم تخلي جهازك رواتر، يستقبل الباكيت ويبعتها للضحيه
+
+----------------
+
+شغل الـ Forwarding
+kali > sysctl -w net.ipv4.ip_forward=1
+كدا انت قلت للكيرنل: اي باكت تجيلك ابعتها
+
+----------------
+
+
+To make it permanent:* Edit the file `/etc/sysctl.conf` and put `net.ipv4.ip_forward=1` in it
+
+
+عشان تخليه دايم:
+
+عدل ملف /etc/sysctl.conf وحط فيه net.ipv4.ip_forward=1
+
+----------------
+شيل #
+ delete #
+
+    #net.ipv4.ip_forward=1
+
+    in terminal  >>  sysctl -p
+
+
+----------------
+part 2  Managing Kernel Modules
+
+التعامل مع LKM
+The old method
+this command and don't see dependencies
+lsmod: displays all currently loaded modules + their size + who is using them.
+بيعرض كل الموديلات المحتمه، الذي يستخدمها، كم حجمها 
+insmod: download  a module
+يحمل موديلز
+rmmod: removes a module
+يمسح موديل
+
+
+part 1:Finding More Information with modinfo
+
+kali>>modinfo
+  you see more information
+
+ ----------------
+
+kali > modinfo bluetooth
+----------------
+
+part2:Adding and Removing Modules with modprobe
+-----------------------------
+adding
+
+modprobe -a <module_name
+
+a mean add
+----------------
+removing 
+modprobe -r <module_name
+r mean removing
+
+----------------
+modprobe -a HackersAriseNewVideo 
+
+kali > dmesg | grep video
+dmesg 
+----------------
+
+running 
+kali > modprobe -r HackersAriseNewVideo
+----------------
+dmesg | grep keyword
+
+show kernal message after download the model

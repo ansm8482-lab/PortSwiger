@@ -1,0 +1,138 @@
+#welcome
+
+
+1.  The Onion Network = TOR
+
+2.  Proxy servers
+
+3.  Virtual Private Networks = VPN
+
+4.  Private encrypted email
+
+                     ------------------------------------
+                     
+                     
+                     
+                     
+
+
+traceroute google.com
+
+
+traceroute google.com           
+traceroute to google.com (142.251.208.142), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.8.1)  2.751 ms  2.707 ms  3.797 ms
+ 2  10.101.141.58 (10.101.141.58)  77.033 ms  77.014 ms  76.997 ms
+ 3  10.101.141.57 (10.101.141.57)  73.337 ms  73.320 ms  73.302 ms
+ 4  10.101.98.114 (10.101.98.114)  73.284 ms  73.266 ms  73.249 ms
+ 5  10.101.139.10 (10.101.139.10)  73.232 ms  76.856 ms  73.198 ms
+ 6  10.101.139.17 (10.101.139.17)  76.825 ms  73.246 ms  73.194 ms
+ 7  10.101.6.10 (10.101.6.10)  73.146 ms  42.768 ms  43.292 ms
+ 8  10.101.6.1 (10.101.6.1)  43.271 ms  43.255 ms  45.099 ms
+ 9  10.29.8.10 (10.29.8.10)  50.529 ms  45.704 ms  45.686 ms
+
+
+ you see in the result the 18 hop see you 
+ sultion use TOR ,VPN ,PROXY
+ 
+                   -------------------------------------
+                   
+ TOOR
+ the idea is circles 3 randome server  
+يلف علي ثلاث نود عشوائيه 
+ verey node is decrypt one layer
+ كب نود بيفك طبقة واحده 
+ 
+ 
+                          ---------------------------------
+                          
+     proxychains
+     
+proxychains <the command you want proxied> <arguments>
+                        
+                          
+proxychains nmap -sT -Pn <IP address>
+               
+                          
+ sudo nano /etc/proxychains4.conf                          
+       
+# proxychains.conf  VER 4.x
+#
+#        HTTP, SOCKS4a, SOCKS5 tunneling proxifier with DNS.
+
+
+# The option below identifies how the ProxyList is treated.
+# only one option should be uncommented at time,
+# otherwise the last appearing option will be accepted
+#
+#dynamic_chain
+#
+# Dynamic - Each connection will be done via chained proxies
+# all proxies chained in the order as they appear in the list
+# at least one proxy must be online to play in chain
+# (dead proxies are skipped)
+# otherwise EINTR is returned to the app
+
+
+--------------------------------
+dynamic_chain  best      بيلف علي كل البروكسيات لو واحد  وقع يروح لغيره
+
+strict_chain       لازم كله شغال بالترتيب لو واحد وقع كله يبوظ
+
+#random_chain           بيعدي علي اكتر من بروكس عشوائي مهم للامان والتخفي 
+
+                          ----------------------
+                          
+ add proxy 
+  sudo nano /etc/proxychains4.conf                          
+ 
+ [ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+socks4 	127.0.0.1 9050
+
+       -------------------------------------------------
+       
+socks4 127.0.0.1 9050 # ده بتاع TOR بالديفولت
+socks5 123.45.67.89 1080
+http 98.76.54.32 8080
+
+
+
+--------------------------------------------------------------
+proxychains firefox www.hackers-arise.com
+
+proxychains firefox www.hackers-arise.com
+                        
+
+
+
+
+VPN and  Encrypted email
+
+
+
+vpn: An encrypted tunnel between you and another server
+
+Encrypted email
+
+
+ProtonMail
+
+
+
+VPN: It hides you from your ISP and bypasses restrictions, but the company might still hand you over.
+
+2. ProtonMail: No one can read your email, not even the company itself.
+
+
+
+
+
+The difference between a VPN and a Proxy:
+
+A Proxy hides your IP address only.
+A VPN hides your IP address and encrypts all your internet traffic.
+
+

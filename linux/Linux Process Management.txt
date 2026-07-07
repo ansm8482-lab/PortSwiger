@@ -1,5 +1,31 @@
-ps 
-ps aux
+ps -aux |grep sleep == pidof sleep
+-----------------------------------------
+kill 21782  == kill $(pidof sleep) 
+------------------------------------------
+ps : print the procces run only in terminal ,just procces running in treminal
+ps aux   :print all procces 
 top          show procces of programe take begerthan of resources
+ps -e      shaow all procces in system
+ps -u kali   show procces of user 'kali'
+-------------------------------------------------
+pstree
+echo $$ :print procces shell or terminnal now
+ps -f   :print sun and peraint 
+ps -a   :print all procces of treminal running
+ps -ejH
+---------------------------------------------------
 //command line
-nice -n 10 /bin/bash/python    men      
+nice -n 10 /bin/bash/python    هيزود الاولويه ليها ويدها موارد 
+PID number of procces himself
+PPID parant procces ID    رقم الام 
+PID =1000
+PID =1500
+PPID =1000 
+--------------------------------------------------------
+PID 1   
+kill 11337 :kill procces
+//procces (baeckground,foreground)
+firefox&   :run fire and somtime you can used terminal
+fg %1      :relate and trminal (firefox& [1] 19375)
+
+

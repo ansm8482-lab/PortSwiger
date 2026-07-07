@@ -1,0 +1,231 @@
+#welcome
+
+                                         apache
+                                        
+service apache2 start                 start abache
+
+service apache2 stop                        stop
+
+
+service apache2 restart                  restart
+
+
+http://localhost/                     and visit this website
+
+                             ------------------------------------------------
+
+                              install abache 
+
+apt-get install apache2
+sudo nano  /var/www/html/index.html &                edit gile page
+
+
+
+                          --------------------------------
+                                     MYSQL
+
+
+service mysql start                    start
+     
+     open my SQL
+      
+sudo su 
+mysql    
+
+
+                              -------------------
+                            
+select : Used to retrieve data  #تجيب بيانات
+
+union  : Used to combine the results of two or more select operations تدمج نتيجتين
+
+insert : Used to adding new data تضيف بينات جديده
+
+update : Used to modify existing data
+
+delete : Used to delete data
+                      ---------------------------
+show databases;             #show dadtabases
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dvwa               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.010 sec)
+
+MariaDB [(none)]>
+
+
+-----------------------------------------------------------
+#show users and password from mysql.user
+
+
+select user, host, password from mysql.user;
+
+
+MariaDB [(none)]> select user, host, password from mysql.user;
++-------------+-----------+-------------------------------------------+
+| User        | Host      | Password                                  |
++-------------+-----------+-------------------------------------------+
+| mariadb.sys | localhost |                                           |
+| root        | localhost | invalid                                   |
+| mysql       | localhost | invalid                                   |
+| dvwa        | localhost | *196BDEDE2AE4F84CA44C47D54D78478C7E2BD7B7 |
++-------------+-----------+-------------------------------------------+
+4 rows in set (0.010 sec)
+
+MariaDB [(none)]> 
+
+
+---------------------------------------------------------------------
+
+use mysql;
+Database changed
+
+----------------------------------------
+#change password of root
+
+update user set password = PASSWORD("hackers-arise") where user = 'root';
+
+-------------------------------------
+
+remoot database
+mysql -u root -p 192.168.1.101
+
+--------------------------------------
+show databases;
++--------------------+
+| Database           |
++--------------------+
+| dvwa               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+
+use mysql;
+Database changed
+----------------------------------------
+
+
+MariaDB [mysql]> show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| column_stats              |
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| global_priv               |
+| gtid_slave_pos            |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| index_stats               |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| roles_mapping             |
+| servers                   |
+| slow_log                  |
+| table_stats               |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| transaction_registry      |
+| user                      |
++---------------------------+
+31 rows in set (0.001 sec)
+
+
+
+
+------------------------------------------------
+describe :show all tables
+
+MariaDB [mysql]> describe user;
++------------------------+---------------------+------+-----+----------+-------+
+| Field                  | Type                | Null | Key | Default  | Extra |
++------------------------+---------------------+------+-----+----------+-------+
+| Host                   | char(255)           | NO   |     |          |       |
+| User                   | char(128)           | NO   |     |          |       |
+| Password               | longtext            | YES  |     | NULL     |       |
+| Select_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Insert_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Update_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Delete_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Create_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Drop_priv              | varchar(1)          | YES  |     | NULL     |       |
+| Reload_priv            | varchar(1)          | YES  |     | NULL     |       |
+| Shutdown_priv          | varchar(1)          | YES  |     | NULL     |       |
+| Process_priv           | varchar(1)          | YES  |     | NULL     |       |
+
+------------------------------------------------------------------------------------
+#SELECT * FROM servers : give me all data frome this 
+
+MariaDB [mysql]> SELECT * FROM servers;
+Empty set (0.001 sec)
+
+--------------------------------------------------------
+
+
+                             postgreSQL by metasploit
+
+postSQL is important becuse save data outomatic
+
+service postgresql  start
+
+run metasploit by permission root
+
+sudo su 
+
+msfconsole
+
+msfdb init       :creat new database
+
+su postgres       :go to root of database becuse crean new user
+
+createuser anas -P      :creat user by name anas 
+
+
+createdb --owner=anas hackers_arise_db             
+:creat ne databe and owner is anas
+
+------------------------------------
+
+
+db_connect anas:anas@127.0.0.1/hackers_arise_db
+
+
+
+db_connect anas:anas@127.0.0.1/hackers_arise_db
+[*] Connected to Postgres data service: 127.0.0.1/hackers_arise_db
+
+
+
+-------------------------------------
+
+
+
+db_status
+[*] Connected to hackers_arise_db. Connection type: postgresql. Connection name: local_db_service.
+
+
+
+

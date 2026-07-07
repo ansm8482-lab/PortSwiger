@@ -1,0 +1,102 @@
+
+# this chapter we take about parttions
+
+
+cd /dev
+ls -la
+
+crw-------      239,0 root  1 Jul 10:42 nvme0
+brw-rw----      259,0 root  1 Jul 10:42 nvme0n1
+brw-rw----      259,1 root  1 Jul 10:42 nvme0n1p1
+brw-rw----      259,2 root  1 Jul 10:42 nvme0n1p2
+brw-rw----      259,3 root  1 Jul 10:42 nvme0n1p4
+brw-rw----      259,4 root  1 Jul 10:42 nvme0n1p5
+brw-rw----      259,5 root  1 Jul 10:42 nvme0n1p6
+
+
+---------------------------------------------------------------
+lsblk
+
+----------------------------------------------------------
+
+
+sudo fdisk -l
+                                                                              /dev ◈ 10:51
+[sudo] password for anas:
+Disk /dev/nvme0n1: 476.94 GiB, 512110190592 bytes, 1000215216 sectors
+Disk model: SAMSUNG MZALQ512HBLU-00BL2
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 16384 bytes / 131072 bytes
+Disklabel type: gpt
+Disk identifier: 25E1DC2B-DC9B-42DB-8DE8-50703E16217C
+
+Device             Start        End   Sectors   Size Type
+/dev/nvme0n1p1      2048    2203647   2201600     1G EFI System
+/dev/nvme0n1p2   2203648  685641727 683438080 325.9G Linux filesystem
+/dev/nvme0n1p4 685641728  894435327 208793600  99.6G Microsoft basic data
+/dev/nvme0n1p5 895356928  994779135  99422208  47.4G Linux filesystem
+/dev/nvme0n1p6 994779136 1000214527   5435392   2.6G Linux swap
+
+      ---------------------------\
+
+
+       lsblk                                                             /dev
+
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda           8:0    1 115.6G  0 disk
+└─sda1        8:1    1 115.6G  0 part
+
+      this is my usb ,the pc firest time don't conver hardware 'usbe ' to folders , you a user needed
+      sultion
+      sudo mkdir mount  /mnt/myusb
+      sudo mount  /dev/sda1 /mnt/myusb
+
+      cd /mnt/myusb   #you see your folders
+
+      --------------------------------------------------
+
+      df -h     #you seed free space
+
+
+◄ 0s ◎ df -h                                                             /dev ◈ 11:44
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p4   98G   29G   64G  32% /
+devtmpfs        3.8G     0  3.8G   0% /dev
+tmpfs           3.8G  364K  3.8G   1% /dev/shm
+efivarfs        184K  173K  6.5K  97% /sys/firmware/efi/efivars
+tmpfs           1.6G  1.5M  1.6G   1% /run
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+tmpfs           3.8G  105M  3.7G   3% /tmp
+tmpfs           772M  1.6M  771M   1% /run/user/1001
+/dev/nvme0n1p5   47G   29G   16G  65% /run/media/anas/98a7483f-1160-44d6-8796-3b9cf6d81ffc
+/dev/nvme0n1p2  320G  224G   81G  74% /run/media/anas/f0263cdf-02d6-42d0-83f5-366b3bad574d
+
+      ----------------------------------------------------------
+      fsck يستخدم لتصليح اي خطا في البارتيشن
+
+      umount /dev/sda1
+      fsck -p /dev/sda1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

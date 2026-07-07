@@ -1,0 +1,57 @@
+ env  :show all variables in evironment
+ set  :it power off env
+ like it
+print the variable of evironment
+1 ----------------------shell
+2----------------------funcions
+3----------------------shortcuts
+-----------------------------------------
+more  :cut of set like books 
+set |more
+-------------------------------------------------------
+HISTSIZE=0    :dont save eny command and temporary
+export HISTSIZE :number of 0 exist 
+--------------------------------------------
+ps1="Hi Best Hacker :#"             ment change names trminale
+Hi Best Hacker :# 
+export ps1
+----------------------------------------
+export :install shop of terminal
+
+ ----------------------------------------
+ echo $LANGUAGE   : print the your system language 
+ echo $LANGUAGE    en_US:en
+----------------------------------------------------------
+$HOME :locale place of your folder 
+echo $HOME          /home/kali
+--------------------------------------------------------
+$PATH   :placces of system searche it
+echo $PATH     
+/home/kali/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/kali/.local/bin:/home/kali/.local/bin
+---------------------------------------------------------------
+$SHELL :type of your terminial 
+echo $SHELL
+/usr/bin/zsh
+---------------------------------------------------------
+$TERM :shape of color at trminal
+echo $TERM 
+xterm-256color
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

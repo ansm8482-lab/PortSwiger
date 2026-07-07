@@ -1,0 +1,55 @@
+ #welcome
+
+ tar -cvf  a.tar  file1 file2
+ else
+  tar -cf  a.tar  file1 file2
+
+ #archive the files
+
+tar :nome of archive programe
+-c  : create
+-v  : verbose "show details"
+-f  : file    name of file
+a.tar :name of archive
+------------------------------------------------
+
+ tar -tvf  a.tar  file1 file2
+ -t :show or print files
+ ---------------------------------------------
+  tar -xvf  a.tar
+  -x :extract
+  -------------------------------------------
+  #ضغط مش ارشف
+  gzip anas.tar
+  gzip anas*.tar
+  --------------------------------
+  copress file
+
+  tar -cvf anas.tar file1 file2
+  gzip anas.tar
+
+  else
+
+  tar -cvzf anas.tar.gz file1 file2
+  else
+  tar -czf anas.tar.gz file1 file2
+
+-z :compare
+else
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+#welcom
+rsyslog : it stored informaons about events and errors and system and app
+rsyslog  :is responsible 
+
+                                 command
+                 
+locate rsyslog 
+ls /var/log/ 
+ ----------------------------------------------------------
+auth,authpriv.*                 /var/log/auth.log
+cron.*                          -/var/log/cron.log
+kern.*                          -/var/log/kern.log
+mail.*                          -/var/log/mail.log
+user.*                          -/var/log/user.log
+
+                -----------------------------
+                
+auth,authpriv.*                 security and login massege and info
+cron.*                          
+kern.*                          kernale massege 
+mail.*                          mail system
+user.*                          user message and datails
+*                               all
+            -----------------------------------------------
+            
+                    priority
+
+debug    develbers datails
+info     just normal informaions
+notice 
+warning  /warn تحذير 
+error 
+crit خطا حرج
+alert تنبيه
+emerg /panic     كارثة للنظام
+
+                      ---------------------------------------
+                      
+mail.*   /var/log/mail   record all mail message imortant 
+kren.crt  /var/log/kernal            /var/log/kernal سجل كل رسايل الكرنال الحرجة في 
+
+                      --------------------------------
+                             اخفاء الاثر الرقمي                                         hidding the digital footprint
+ 
+ in linux by command "rm" you can return dtate you datet is before
+ so sultions is user "shred" tool
+ shred  : this delete data and adding random data rplace the dataails deleting 
+                         بيحذف الداتا ويحط فوقيها داتا عشوائيه اشان يصعبها علي المحللين 
+                         
+
+shred -f -n 10 /var/log/auth.log.*
+
+shred =deleeting
+-f =force
+-n 10   =number 10      عدد السطور ال هيكتب فوقيها 
+
+
+                         -----------------------------
+                         disable recordind system 
+the hacker cat disable recording to prevent the system frome tracking any new active 
+بالعربي يمكن للهاكر ايقاف وتعطيل نظام التسجيل تماما لمنع النظام من اي تتبع جديد للهااكر 
+

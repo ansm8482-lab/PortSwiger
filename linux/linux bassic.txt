@@ -8,6 +8,7 @@ rm      delet  file not foler
 rm -rf  delete all 
 cp      copy 
 mv      move
+--------------------------------------------------------
 cp anas.txt /home/kali/skx        copy file 'anas' to skx          
 touch   creating new file
 mkdire  chreating new folder
@@ -16,12 +17,14 @@ cd ../..
 cd /
 man 
 locate     search all file 
+-------------------------------------------------------------
 sudo updatedb       
 whereis   searche programes like chrome
 which     which the version working now
 find      search
 find / -t f -n nmap 
 find / -type f -name nmap    
+------------------------------------------------------------
 pa aux                see all procces in background 
 ps aux | grep nmap    searche aprroces "nmap " working in background
 cat >> anas           write the end or last of file
@@ -31,7 +34,7 @@ head                   print firest 10 lines
 head -50               print firest 50 lines
 tail                   print laster "end" 10 lines
 tail -50                                  50
-
+-------------------------------------------------------------------------
 nl    /etc/snort/snort.lua       print lines and numers
 grep                             
 nl    /etc/snort/snort.lua |grep output         search in file "output"
@@ -41,17 +44,3 @@ tail -10 anas.txt        last 10 lines
 tail -n+10 anas.txt      start of liner number 10 and continue the end
 more                     read file like book "enter 'q' to log out
 less                          //                            ///     if you want search 'ctrl f'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
